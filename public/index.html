@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="styles/style1.css">
+<link rel="icon" href="favicon.ico">
+<script>
+    const stylesheets = [
+        "styles/style7.css", // Sunday
+        "styles/style1.css", // Monday
+        "styles/style2.css", // Tuesday
+        "styles/style3.css", // Wednesday
+        "styles/style4.css", // Thursday
+        "styles/style5.css", // Friday
+        "styles/style6.css"  // Saturday
+    ];
+    const today = new Date().getDay();
+    document.write(`<link rel="stylesheet" href="${stylesheets[today]}">`);
+</script>
+
+<title>Raspberry Server</title>
+<body>
+    <div class="container">
+        <article id="content">
+            <h1>🏓 Raspberry Server 🏓</h1>
+            <h2>This page connects all projects using Express. <br>
+            It's running on Mustafa's Raspberry in <a id="tyringe" href="https://www.google.com/search?q=lund+google+maps&sca_esv=0a8d1f523c448617&sxsrf=AHTn8zpL_83Dw4rlt5CJqLvVJDC702rNag%3A1743518568031&ei=aPvrZ5vOAayiwPAP4uTOkQw&ved=0ahUKEwiboqDniLeMAxUsERAIHWKyM8IQ4dUDCBA&uact=5&oq=lund+google+maps&gs_lp=Egxnd3Mtd2l6LXNlcnAiEGx1bmQgZ29vZ2xlIG1hcHMyBRAAGIAEMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgFGB4yBhAAGAUYHjIGEAAYBRgeSIoKULwFWKQJcAF4AZABAJgBjwGgAbIEqgEDMS40uAEDyAEA-AEBmAIEoALmAsICChAAGLADGNYEGEfCAg0QABiwAxjWBBhHGMkDwgIOEAAYgAQYsAMYkgMYigXCAgsQABiABBiRAhiKBcICBxAAGIAEGA2YAwCIBgGQBgqSBwMyLjKgB4Ae&sclient=gws-wiz-serp">Lund</a>📌</h2>
+        </article>
+        <title>Clock</title>
+    <style>
+        #clock {
+            font-size: 2em;
+            font-family: cursive;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initial call to display the clock immediately
+        updateClock();
+    </script>
+    <style>
+        .flag-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow flags to wrap to the next line */
+            gap: 10px; /* Space between flags */
+        }
+        .flag-container img {
+            width: 100px; /* Adjust as needed */
+            height: auto;
+        }
+    </style>
+        <div class="flag-container">
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Sweden" target="_blank">
+            <img src="images/Flag_of_Sweden.svg.webp" alt="Sweden flag">
+            </a>
+
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Poland" target="_blank">
+            <img src="images/pl.png" alt="Poland flag">
+            </a>
+
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Syria" target="_blank">
+            <img src="images/Flag_of_the_Syrian_revolution.svg.webp" alt="Syria flag">
+            </a>
+
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Iraq" target="_blank">
+            <img src="images/Iq.png" alt="Iraq flag">
+            </a>
+
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Serbia" target="_blank">
+            <img src="images/Flag_of_Serbia.svg.webp" alt="Serbia flag">
+            </a>
+
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Vietnam" target="_blank">
+            <img src="images/Flag_of_Vietnam.svg.png" alt="Vietnam flag">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Russia" target="_blank">
+            <img src="images/Flag_of_Russia.svg.webp" alt="Russia flag">
+            </a>
+        </div>
+        <article id="about-raspberry">
+            <h2>About the Raspberry</h2>
+            <p>This server is powered by a Raspberry Pi, a small and affordable computer that is perfect for hosting lightweight web applications. It is energy-efficient and versatile, making it an excellent choice for personal projects and learning purposes. Thank you to everyone who joined the server!</p>
+            <a target="_blank" href="aboutraspberry.png"><img id="img" src="aboutraspberry.png" alt="Raspberry Specs"></a><br><br>
+            <a href="seminar2/" style="background-color: yellowgreen;"> Mustafa's seminar 2</a><br>
+
+            <p><a target="_blank" href="http://10.147.19.2:8888">RPI-monitor - 10.147.19.1:8888</a></p>
+            <p><a target="_blank" href="http://10.147.19.1:3001">Daniels Server - 10.147.19.1:3001</a></p>
+        </article>
+    </div>
+</body>
+</html>
